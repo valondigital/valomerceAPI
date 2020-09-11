@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+ 
+  loggedIn = false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(){
+    this.loggedIn = !this.loggedIn;
+    
   }
 
 }
