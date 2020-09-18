@@ -32,6 +32,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
 import { ErrorInterceptorProvider } from './service/error.interceptor';
+import { environment } from './../environments/environment';
 
 
 

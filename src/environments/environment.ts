@@ -6,7 +6,7 @@
   export const environment = {
     production: false,
     //apiUrl: 'https://valomencebackend.herokuapp.com/api/',
-    baseUrl :  'https://valomencebackend.herokuapp.com/api/user/'
+     apiUrl:   'https://valomencebackend.herokuapp.com/api/user/'
     //baseUrl : '' http://localhost:8080/api/admin/";
   };
 
