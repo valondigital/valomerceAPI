@@ -1,0 +1,31 @@
+
+<div class = container>
+    <form #registerForm="ngForm">
+        <mat-card style=" border-radius:0px" style="margin: 30px 30px 30px 30px;" class="card">
+          <mat-card-content> 
+              
+           <div class="row">
+             <div class="col-lg-6" >
+               <mat-form-field appearance="outline">
+                   <mat-label>Username</mat-label>
+                   <input  matInput 
+                           email
+                           name="username"
+                           >
+               </mat-form-field>
+            </div>
+            <div class="col-lg-6">
+               <mat-form-field appearance="outline">
+                <mat-label>Password</mat-label>
+                <input matInput 
+                       required
+                       name="password"
+                       >
+            </mat-form-field>
+            </div>
+           </div>
+        
+        </mat-card-content>
+           </mat-card>
+     </form>
+    </div>

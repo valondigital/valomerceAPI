@@ -4,9 +4,10 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { AuthService } from './service/auth.service';
 
 
-import {MatCardModule} from '@angular/material/card';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { HomeComponent } from './components/home/home.component';
@@ -16,13 +17,33 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { appRoutes } from './routes';
 import { RouterModule } from '@angular/router';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
+
+import { LoginComponent } from './components/login/login.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+
+import {MatCardModule} from '@angular/material/card';
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatButtonModule} from '@angular/material/button';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AddNewBookComponent } from './components/add-new-book/add-new-book.component';
+import { ErrorInterceptorProvider } from './service/error.interceptor';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    RegistrationComponent,
+    ProfileComponent,
+    AddNewBookComponent
   ],
   imports: [
     HttpClientModule,
@@ -32,11 +53,17 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule,
     MatCardModule,
-    MatToolbarModule
-
+    MatInputModule,
+    MatTableModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatProgressSpinnerModule
   ],
   providers: [
-
+    AuthService,
+    ErrorInterceptorProvider
   ],
   bootstrap: [
     AppComponent
